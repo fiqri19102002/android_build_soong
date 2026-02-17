@@ -1440,9 +1440,6 @@ func (c *config) BuildKeys() string {
 	if defaultCert == "" || defaultCert == filepath.Join(testKeyDir, "testkey") {
 		return "test-keys"
 	}
-	if strings.HasPrefix(defaultCert, "vendor/lineage-priv/") {
-		return "release-keys"
-	}
 	return "dev-keys"
 }
 
